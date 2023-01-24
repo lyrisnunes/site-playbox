@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     border: none;
@@ -10,14 +10,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.container h3{
+.container h3 {
     background-color: #FFD700;
     color: white;
     text-align: center;
     font-weight: 300;
 }
 
-.header{
+.header {
     background-color: #000000;
     color: aliceblue;
     padding: 8px 20px;
@@ -27,33 +27,34 @@
     flex-wrap: wrap;
 }
 
-.header-menu ul{
+.header-menu ul {
     display: flex;
     gap: 20px;
 }
 
-.header-menu a{
+.header-menu a {
     color: aliceblue;
 
 }
- .header-entrega h3{
+
+.header-entrega h3 {
     color: #000000;
     padding: .2rem;
 }
 
-.logo img{
+.logo img {
     height: 70px;
 }
 
-.mobile-menu-icon{
+.mobile-menu-icon {
     display: none;
 }
 
-.header-mobile{
+.header-mobile {
     display: none;
 }
 
-.header-menu li::after{
+.header-menu li::after {
     content: '';
     width: 0%;
     height: 2px;
@@ -62,27 +63,27 @@
     transition: .4s;
 }
 
-.header li:hover::after{
+.header li:hover::after {
     width: 100%;
 }
 
-@media(max-width:700px){
-    .link-header{
+@media(max-width:700px) {
+    .link-header {
         display: none;
     }
 
-    .mobile-menu-icon{
+    .mobile-menu-icon {
         display: block;
     }
 
-    .mobile-menu-icon button{
+    .mobile-menu-icon button {
         background-color: transparent;
         color: #2FE64C;
         font-size: 1.3rem;
         cursor: pointer;
     }
 
-    .header-mobile ul{
+    .header-mobile ul {
         display: flex;
         flex-direction: column;
         background-color: #000000;
@@ -90,17 +91,23 @@
         padding-bottom: .5rem;
     }
 
-    .header-mobile a{
+    .header-mobile a {
         color: aliceblue;
-        padding-bottom:.5rem ;
+        padding-bottom: .5rem;
     }
 
-    .header-mobile  .link-header{
+    .header-mobile .link-header {
         display: block;
     }
 
-    .abrir{
+    .abrir {
         display: block;
+    }
+}
+
+@media(max-width:450px) {
+    .header-entrega h3 {
+        font-size: .7rem;
     }
 }
 
@@ -124,13 +131,14 @@
     height: 50%;
     object-fit: cover;
 }
+
 /**/
 
-.vantagem-bg{
-    background-color:  #000000;
+.vantagem-bg {
+    background-color: #000000;
 }
 
-.vantagem{
+.vantagem {
     max-width: 1300px;
     margin: 0 auto;
     color: aliceblue;
@@ -142,30 +150,40 @@
     padding: 1rem;
 }
 
-.vantagem-caixa{
+.vantagem-caixa {
     display: flex;
     align-items: center;
     text-align: center;
     gap: 20px;
 }
 
-.vantagem i{
+.vantagem i {
     font-size: 2rem;
 }
 
-.vantagem-item{
+.vantagem-item {
     display: flex;
     flex-direction: column;
 
 }
 
+@media(max-width:500px){
+    .vantagem i {
+        font-size: 1rem;
+    }
+
+    .vantagem h3{
+        font-size: .9rem;
+    }
+}
+
 /**/
 
-.container-bg{
+.container-bg {
     background-color: #f5f5f5;
 }
 
-.container-bg h1{
+.container-bg h1 {
     background-color: #f5f5f5;
     color: #000000;
     padding: 3rem;
@@ -174,7 +192,7 @@
     font-size: 2rem;
 }
 
-.container-bg h1:before{
+.container-bg h1:before {
     content: '';
     display: inline-block;
     width: 40px;
@@ -183,7 +201,7 @@
     margin-right: 5px;
 }
 
-.container-bg h1::after{
+.container-bg h1::after {
     content: '';
     display: inline-block;
     width: 40px;
@@ -192,8 +210,8 @@
     margin-left: 5px;
 }
 
-.produtos{
-    max-width: 1300px;
+.produtos {
+    max-width: 1500px;
     margin: 0 auto;
     background-color: #f5f5f5;
     display: flex;
@@ -203,19 +221,36 @@
     text-align: center;
 }
 
-.produtos-item{
+.produtos-item {
     padding: 1rem;
     background-color: white;
 
 }
 
-.container-bg img{
+.container-bg img {
     max-width: 250px;
 }
 
-.produtos-item a{
+.produtos-item a {
     color: #000000;
     background-color: #FFD700;
     padding: .2rem .3rem;
 }
 
+@media(max-width:730px){
+    .container-bg h1 {
+        font-size: 1.8rem;
+    }
+
+    .container-bg h1:before {
+        width: 20px;
+    }
+    
+    .container-bg h1::after {
+        width: 20px;
+    }
+
+    .container-bg img {
+        max-width: 150px;
+    }
+}
