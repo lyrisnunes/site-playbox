@@ -7,7 +7,20 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    outline: none;
     font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    background-color: #000000;
+}
+
+.container .destaque {
+    background-color: #FFD700;
+    color: #000000;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.5rem;
 }
 
 .container h3 {
@@ -18,23 +31,37 @@
 }
 
 .header {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: .9rem 1rem;
     background-color: #000000;
     color: aliceblue;
-    padding: 8px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
-.header-menu ul {
+
+.header-menu {
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
 }
 
-.header-menu a {
-    color: aliceblue;
+.header-menu input{
+    padding: .5rem;
+    width: 300px;
+}
 
+.header-menu i{
+    background-color: #f5f5f5;
+    color: #000000;
+    height: 100%;
+    cursor: pointer;
+    margin-right: 1rem;
 }
 
 .header-entrega h3 {
@@ -43,7 +70,7 @@
 }
 
 .logo img {
-    height: 70px;
+    height: 80px;
 }
 
 .mobile-menu-icon {
@@ -54,20 +81,162 @@
     display: none;
 }
 
-.header-menu li::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background-color: #FFD700;
-    display: block;
-    transition: .4s;
+/**/
+
+.header-menu-sub {
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
 }
 
-.header li:hover::after {
-    width: 100%;
+.geral {
+    width: 200px;
+}
+
+.select-menu .select-btn {
+    background-color: #000000;
+    color: #CED4DA;
+    display: flex;
+    justify-content: space-between;
+    padding: .7rem;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.select-btn i {
+    font-size: 1.1rem;
+    transition: .3s;
+}
+
+.select-menu.active .select-btn i {
+    transform: rotate(-180deg);
+}
+
+.select-menu .options {
+    padding: .7rem;
+    background-color: #000000;
+    color: #CED4DA;
+    display: none;
+}
+
+.select-menu.active .options {
+    display: block;
+}
+
+.options .option {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 1rem;
+    cursor: pointer;
+}
+
+.options .option:hover {
+    background: #CED4DA;
+    color: #000000;
+}
+
+/**/
+
+
+
+.select-menu2 .select-btn2 {
+    background-color: #000000;
+    color: #CED4DA;
+    display: flex;
+    justify-content: space-between;
+    padding: .7rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.select-btn2 i {
+    font-size: 1.1rem;
+    transition: .3s;
+}
+
+.select-menu2.active .select-btn2 i {
+    transform: rotate(-180deg);
+}
+
+.select-menu2 .options2 {
+    padding: .7rem;
+    background-color: #000000;
+    color: #CED4DA;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.select-menu2.active .options2 {
+    display: block;
+}
+
+.options2 .option2 {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 1rem;
+    cursor: pointer;
+}
+
+.options2 .option2:hover {
+    background: #CED4DA;
+    color: #000000;
+}
+
+/**/
+
+.select-menu3 .select-btn3 {
+    background-color: #000000;
+    color: #CED4DA;
+    display: flex;
+    justify-content: space-between;
+    padding: .7rem;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.select-btn3 i {
+    font-size: 1.1rem;
+    transition: .3s;
+}
+
+.select-menu3.active .select-btn3 i {
+    transform: rotate(-180deg);
+}
+
+.select-menu3 .options3 {
+    padding: .7rem;
+    background-color: #000000;
+    color: #CED4DA;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.select-menu3.active .options3 {
+    display: block;
+}
+
+.options3 .option3 {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 1rem;
+    cursor: pointer;
+}
+
+.options3 .option3:hover {
+    background: #CED4DA;
+    color: #000000;
 }
 
 @media(max-width:700px) {
+    header .logo{
+        display: flex;
+        align-items: center;
+    }
     .link-header {
         display: none;
     }
@@ -103,12 +272,67 @@
     .abrir {
         display: block;
     }
+
+    .header-menu-sub{
+        display: none;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .header-menu input{
+        padding: .3rem;
+        width: 100%;
+    }
+
+    .header-entrega h3 {
+        color: #000000;
+        font-size: 1rem;
+        padding: .3rem;
+    }
+
 }
 
-@media(max-width:450px) {
-    .header-entrega h3 {
-        font-size: .7rem;
+@media(max-width:650px) {
+
+    .header{
+        display: flex;
+        justify-content: space-between;
     }
+
+    .header-entrega h3 {
+        font-size: .9rem;
+        display: none;
+    }
+
+    .header-menu input{
+        padding: .1rem;
+        width: 300px;
+    }
+}
+
+@media(max-width:475px) {
+
+    .container .destaque {
+        font-size: 1.1rem;
+    }
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header-menu input{
+        padding: .3rem;
+        width: 100%;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+
 }
 
 /**/
@@ -132,9 +356,7 @@
     object-fit: contain;
 }
 
-
-
-@media(max-width: 700px){
+@media(max-width: 700px) {
     .swiper-slide img {
         display: block;
         width: 100%;
@@ -142,6 +364,7 @@
         object-fit: contain;
     }
 }
+
 /**/
 
 .vantagem-bg {
@@ -177,12 +400,12 @@
 
 }
 
-@media(max-width:500px){
+@media(max-width:500px) {
     .vantagem i {
         font-size: 1rem;
     }
 
-    .vantagem h3{
+    .vantagem h3 {
         font-size: .9rem;
     }
 }
@@ -191,7 +414,7 @@
 
 .container-bg {
     background-color: #f5f5f5;
-    padding-bottom:  2rem;
+    padding-bottom: 2rem;
 }
 
 .container-bg h1 {
@@ -248,7 +471,7 @@
     padding: .2rem .3rem;
 }
 
-@media(max-width:730px){
+@media(max-width:730px) {
     .container-bg h1 {
         font-size: 1.8rem;
     }
@@ -256,7 +479,7 @@
     .container-bg h1:before {
         width: 20px;
     }
-    
+
     .container-bg h1::after {
         width: 20px;
     }
@@ -266,7 +489,7 @@
     }
 }
 
-footer{
+footer {
     background-color: #000000;
     color: white;
     text-align: center;

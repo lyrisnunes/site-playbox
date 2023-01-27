@@ -1,3 +1,55 @@
+const optionMenu = document.querySelector('.select-menu');
+      selectBtn = optionMenu.querySelector('.select-btn'),
+      options = optionMenu.querySelectorAll('.option'),
+      sBtn_text = optionMenu.querySelector('.option-text');
+
+selectBtn.addEventListener('click', () => optionMenu.classList.toggle('active'));
+
+options.forEach(Option => {
+    Option.addEventListener('click', () => {
+        let selectOption = Option.querySelector('.option-text').innerText;
+        sBtn_text.innerText = selectOption;
+
+        optionMenu.classList.remove('active');
+    });
+
+});
+
+
+const optionMenu2 = document.querySelector('.select-menu2');
+      selectBtn = optionMenu2.querySelector('.select-btn2'),
+      options = optionMenu2.querySelectorAll('.option2'),
+      sBtn_text = optionMenu2.querySelector('.option-text2');
+
+selectBtn.addEventListener('click', () => optionMenu2.classList.toggle('active'));
+
+options.forEach(Option => {
+    Option.addEventListener('click', () => {
+        let selectOption = Option.querySelector('.option-text').innerText;
+        sBtn_text.innerText = selectOption;
+
+        optionMenu.classList.remove('active');
+    });
+
+});
+
+const optionMenu3 = document.querySelector('.select-menu3');
+      selectBtn = optionMenu3.querySelector('.select-btn3'),
+      options = optionMenu3.querySelectorAll('.option3'),
+      sBtn_text = optionMenu3.querySelector('.option-text3');
+
+selectBtn.addEventListener('click', () => optionMenu3.classList.toggle('active'));
+
+options.forEach(Option => {
+    Option.addEventListener('click', () => {
+        let selectOption = Option.querySelector('.option-text').innerText;
+        sBtn_text.innerText = selectOption;
+
+        optionMenu.classList.remove('active');
+    });
+
+});
+
  function abrirMenu(){
     let menuMobile = document.querySelector('.header-mobile')
         if(menuMobile.classList.contains('abrir')){
