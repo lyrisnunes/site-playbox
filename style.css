@@ -307,7 +307,6 @@
     }
 
     .header-menu input{
-        padding: .1rem;
         width: 300px;
     }
 }
@@ -324,14 +323,9 @@
     }
 
     .header-menu input{
-        padding: .3rem;
+        padding: .5rem;
         width: 100%;
     }
-
-    .logo img {
-        height: 50px;
-    }
-
 
 }
 
